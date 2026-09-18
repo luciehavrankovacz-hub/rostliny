@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jeden pokus, jedna změna – video o našem pokusu s rostlinami</title>
+<style>
+  :root{--bg:#0f2016;--panel:#1b3324;--leaf:#8fd45a;--gold:#f0c060;--cream:#f2f8e6;--ink:#e6efdc;--muted:#a8c090;--nod:#f07a9a}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(ellipse at top,#26482f,var(--bg) 60%);color:var(--ink);font-family:'Segoe UI',Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 60px}
+  header{text-align:center;margin-bottom:16px}
+  h1{font-family:'Segoe Print','Comic Sans MS',cursive;font-size:clamp(28px,6vw,56px);margin:4px 0 0;color:var(--cream);letter-spacing:1px}
+  .sub{color:var(--muted);font-size:clamp(15px,2.4vw,19px)}
+  .icons{font-size:clamp(26px,5vw,40px);letter-spacing:8px}
+  .player{background:#000;border:3px solid var(--leaf);border-radius:12px;overflow:hidden;box-shadow:0 10px 40px #000a}
+  video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+  .tip{color:var(--muted);text-align:center;margin:8px 0 0;font-size:15px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .box{background:var(--panel);border:2px solid #34543c;border-radius:12px;padding:16px 18px}
+  .box h2{margin:0 0 10px;color:var(--leaf);font-size:22px;font-family:'Segoe Print','Comic Sans MS',cursive}
+  .chap{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;font:inherit;font-size:17px;color:var(--ink);background:none;border:0;border-bottom:1px solid #34543c;padding:9px 4px;cursor:pointer}
+  .chap:hover{background:#26452f}
+  .chap.now{background:#2f5a3a;color:var(--cream)}
+  .chap b{color:var(--leaf);min-width:52px;font-variant-numeric:tabular-nums}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  td{padding:6px;border-bottom:1px solid #34543c;vertical-align:top}
+  td:first-child{color:var(--leaf);font-weight:bold;white-space:nowrap}
+  .rule{grid-column:1/-1;text-align:center;background:linear-gradient(90deg,#24422c,#2f5a3a,#24422c);border:2px dashed var(--leaf)}
+  .rule p{font-size:clamp(17px,3vw,24px);margin:6px 0;color:var(--cream)}
+  .rule .big{font-family:'Segoe Print','Comic Sans MS',cursive;color:var(--gold)}
+  .pink{color:var(--nod)}
+  footer{text-align:center;color:var(--muted);margin-top:28px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="icons">🌱🧪🔬📓🏆</div>
+    <h1>Jeden pokus, jedna změna</h1>
+    <div class="sub">Jak pozorujeme rostliny · průvodce Martin „Kýbl“ · 10 minut</div>
+  </header>
+
+  <div class="player"><video id="v" src="video/jeden_pokus_jedna_zmena.mp4" controls preload="metadata" playsinline></video></div>
+  <p class="tip">📱 Na mobilu otoč telefon na šířku a dej celou obrazovku ⛶</p>
+
+  <div class="grid">
+    <div class="box">
+      <h2>🎬 Kapitoly (klikni a video skočí)</h2>
+      <div id="chapters"></div>
+    </div>
+    <div class="box">
+      <h2>🧪 Naše tři varianty</h2>
+      <table>
+        <tr><td>N</td><td>nic, jen voda – kontrola</td></tr>
+        <tr><td>H</td><td>hnojivo – kupované živiny</td></tr>
+        <tr><td>B</td><td>bakterie <i>Rhizobium</i> – živé, dělají hlízky</td></tr>
+      </table>
+      <h2 style="margin-top:14px">🌾 Kdo co dělá</h2>
+      <table>
+        <tr><td>Dan</td><td>hrách setý – luskovina, hlízky umí</td></tr>
+        <tr><td>Martin</td><td>oves setý – srovnání, hlízky neumí</td></tr>
+        <tr><td>Kolik</td><td>3 varianty × 2 místa × 3 opakování = 18 kelímků na každého</td></tr>
+      </table>
+    </div>
+
+    <div class="box rule">
+      <p class="big">Nejdůležitější pravidlo pokusu</p>
+      <p>Každá rostlina má <b>jen jednu jedinou změnu</b> – čím ji nakrmíme.</p>
+      <p>Stejný kelímek · stejná hlína · stejné světlo · stejně vody · stejné semínko</p>
+      <p class="sub">Kdybychom měnili víc věcí najednou, nikdy bychom nevěděli, co výsledek způsobilo.</p>
+    </div>
+
+    <div class="box">
+      <h2>📏 Co měříme</h2>
+      <table>
+        <tr><td>2× týdně</td><td>výška rostliny a počet listů</td></tr>
+        <tr><td>Zalévání</td><td>na kuchyňské váze – všechny stejně vody</td></tr>
+        <tr><td>Fotky</td><td>celý tác ze stejného místa → časosběr</td></tr>
+        <tr><td>Sklizeň</td><td>počet hlízek a kolik je <span class="pink">růžových</span></td></tr>
+        <tr><td>Hlavní číslo</td><td>sušina – usušit a zvážit na 0,1 g</td></tr>
+      </table>
+    </div>
+    <div class="box">
+      <h2>🔍 Poctivý pokus</h2>
+      <table>
+        <tr><td>Slepé měření</td><td>na kelímcích jsou jen čísla, co je co víme až z deníku</td></tr>
+        <tr><td>Losování</td><td>pořadí kelímků na tácu losujeme a tácem otáčíme</td></tr>
+        <tr><td>Deník</td><td>píše se propiskou, nic se nevytrhává – ani když se něco pokazí</td></tr>
+        <tr><td>Předpověď</td><td>graf ve videu je zatím jen náš odhad, čísla teprve naměříme</td></tr>
+      </table>
+    </div>
+  </div>
+  <footer>Projekt Dana a Martina pro Festival vědy a techniky AMAVET.<br>Vyrobeno s pomocí AI (Claude) – obrázky, hudba i hlas jsou vytvořené počítačem. 🌱</footer>
+</div>
+
+<script>
+const CHAPTERS = [[0, 'Úvod – Martin, Dan a hlavní otázka'], [48, '1. Jedna změna (nejdůležitější pravidlo)'], [133, '2. Tajná zbraň – hlízkové bakterie'], [218, '3. Náš pokus – jak to uděláme'], [292, '4. Den za dnem – setí, světlo a měření'], [421, '5. Sklizeň a čísla'], [508, '6. Cesta soutěží']];
+const v = document.getElementById('v');
+const zvukZap = () => { v.muted = false; v.defaultMuted = false; v.removeAttribute('muted'); if (v.volume < 0.05) v.volume = 1; };
+zvukZap();
+v.addEventListener('loadedmetadata', zvukZap);
+v.addEventListener('play', zvukZap);
+const fmt = s => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+const box = document.getElementById('chapters');
+CHAPTERS.forEach(([t, name]) => {
+  const b = document.createElement('button'); b.className = 'chap'; b.dataset.t = t;
+  b.innerHTML = '<b>' + fmt(t) + '</b><span>' + name + '</span>';
+  b.onclick = () => {
+    const go = () => { zvukZap(); v.currentTime = t; v.play().catch(() => {}); };
+    if (v.readyState >= 1) go(); else { v.addEventListener('loadedmetadata', go, { once: true }); v.load(); }
+    v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  box.appendChild(b);
+});
+v.addEventListener('timeupdate', () => {
+  let cur = null; document.querySelectorAll('.chap').forEach(b => { b.classList.remove('now'); if (+b.dataset.t <= v.currentTime) cur = b; });
+  if (cur) cur.classList.add('now');
+});
+</script>
+</body>
+</html>
